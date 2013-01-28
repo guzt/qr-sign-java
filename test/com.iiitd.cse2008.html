@@ -1,19 +1,8 @@
 <html>
 <head>
 <style>
-body, th, td, tr {
-	font-size: 12px;
-	/* font-weight: bold; */
-	font-family: sans-serif;
-	/* font-weight: bold;*/
-}
-td
-{
-text-align:center;
-}
-
-/*table
-{
+table
+/*{
     border: 1px solid;
 	border-spacing: 0px;
 	border-collapse: collapse;
@@ -27,7 +16,9 @@ td
 </style>
 <script>
 // var verified = "$$VERIFIED$$";
-var innerData = {"transcript":{"student":{"id":"002","status":"graduated","program":{"field":"CSE","degree":"BTech","year":2009,"semester":[{"course":[{"id":101,"stream":"CSE","grade":"B","credits":4},{"id":111,"stream":"CSE","grade":"C","credits":4},{"id":121,"stream":"CSE","grade":"B","credits":4},{"id":131,"stream":"CSE","grade":"C","credits":4}],"year":2010,"type":"monsoon"},{"course":[{"id":102,"stream":"CSE","grade":"B","credits":4},{"id":112,"stream":"CSE","grade":"C","credits":4},{"id":122,"stream":"CSE","grade":"C","credits":4},{"id":101,"stream":"MTH","grade":"C","credits":4}],"year":2011,"type":"winter"},{"course":{"id":482,"stream":"MSC","grade":"S","credits":2},"year":2011,"type":"summer"},{"course":[{"id":201,"stream":"COM","grade":"A","credits":4},{"id":201,"stream":"CSE","grade":"B","credits":4},{"id":231,"stream":"CSE","grade":"C","credits":4},{"id":201,"stream":"ESC","grade":"B","credits":4},{"id":201,"stream":"MTH","grade":"C","credits":4}],"year":2011,"type":"monsoon"},{"course":[{"id":201,"stream":"COM","grade":"A","credits":4},{"id":201,"stream":"CSE","grade":"B","credits":4},{"id":231,"stream":"CSE","grade":"C","credits":4},{"id":201,"stream":"ESC","grade":"B","credits":4},{"id":201,"stream":"MTH","grade":"C","credits":4}],"year":2011,"type":"monsoon"},{"course":[{"id":201,"stream":"COM","grade":"A","credits":4},{"id":201,"stream":"CSE","grade":"B","credits":4},{"id":231,"stream":"CSE","grade":"C","credits":4},{"id":201,"stream":"ESC","grade":"B","credits":4},{"id":201,"stream":"MTH","grade":"C","credits":4}],"year":2011,"type":"monsoon"},{"course":[{"id":201,"stream":"COM","grade":"A","credits":4},{"id":201,"stream":"CSE","grade":"B","credits":4},{"id":231,"stream":"CSE","grade":"C","credits":4},{"id":201,"stream":"ESC","grade":"B","credits":4},{"id":201,"stream":"MTH","grade":"C","credits":4}],"year":2011,"type":"monsoon"},{"course":[{"id":201,"stream":"COM","grade":"A","credits":4},{"id":201,"stream":"CSE","grade":"B","credits":4},{"id":231,"stream":"CSE","grade":"C","credits":4},{"id":201,"stream":"ESC","grade":"B","credits":4},{"id":201,"stream":"MTH","grade":"C","credits":4}],"year":2011,"type":"monsoon"},{"course":[{"id":201,"stream":"COM","grade":"A","credits":4},{"id":201,"stream":"CSE","grade":"B","credits":4},{"id":231,"stream":"CSE","grade":"C","credits":4},{"id":201,"stream":"ESC","grade":"B","credits":4},{"id":201,"stream":"MTH","grade":"C","credits":4}],"year":2011,"type":"monsoon"}]},"name":"Aarti Chand","year":2009},"date":"2012.03.27"}};
+// var innerData = $$INNERDATA$$;
+var verified = "true";
+var innerData = {"transcript":{"student":{"id":"002","status":"graduated","program":{"field":"CSE","degree":"BTech","year":2009,"semester":[{"course":[{"id":101,"stream":"CSE","grade":"B","credits":4},{"id":111,"stream":"CSE","grade":"C","credits":4},{"id":121,"stream":"CSE","grade":"B","credits":4},{"id":131,"stream":"CSE","grade":"C","credits":4}],"year":2010,"type":"monsoon"},{"course":[{"id":102,"stream":"CSE","grade":"B","credits":4},{"id":112,"stream":"CSE","grade":"C","credits":4},{"id":122,"stream":"CSE","grade":"C","credits":4},{"id":101,"stream":"MTH","grade":"C","credits":4}],"year":2011,"type":"winter"},{"course":{"id":482,"stream":"MSC","grade":"S","credits":2},"year":2011,"type":"summer"},{"course":[{"id":201,"stream":"COM","grade":"A","credits":4},{"id":201,"stream":"CSE","grade":"B","credits":4},{"id":231,"stream":"CSE","grade":"C","credits":4},{"id":201,"stream":"ESC","grade":"B","credits":4},{"id":201,"stream":"MTH","grade":"C","credits":4}],"year":2011,"type":"monsoon"},{"course":[{"id":201,"stream":"COM","grade":"A","credits":4},{"id":201,"stream":"CSE","grade":"B","credits":4},{"id":231,"stream":"CSE","grade":"C","credits":4},{"id":201,"stream":"ESC","grade":"B","credits":4},{"id":201,"stream":"MTH","grade":"C","credits":4}],"year":2011,"type":"monsoon"},{"course":[{"id":201,"stream":"COM","grade":"A","credits":4},{"id":201,"stream":"CSE","grade":"B","credits":4},{"id":231,"stream":"CSE","grade":"C","credits":4},{"id":201,"stream":"ESC","grade":"B","credits":4},{"id":201,"stream":"MTH","grade":"C","credits":4}],"year":2011,"type":"monsoon"},{"course":[{"id":201,"stream":"COM","grade":"A","credits":4},{"id":201,"stream":"CSE","grade":"B","credits":4},{"id":231,"stream":"CSE","grade":"C","credits":4},{"id":201,"stream":"ESC","grade":"B","credits":4},{"id":201,"stream":"MTH","grade":"C","credits":4}],"year":2011,"type":"monsoon"},{"course":[{"id":201,"stream":"COM","grade":"A","credits":4},{"id":201,"stream":"CSE","grade":"B","credits":4},{"id":231,"stream":"CSE","grade":"C","credits":4},{"id":201,"stream":"ESC","grade":"B","credits":4},{"id":201,"stream":"MTH","grade":"C","credits":4}],"year":2011,"type":"monsoon"},{"course":[{"id":201,"stream":"COM","grade":"A","credits":4},{"id":201,"stream":"CSE","grade":"B","credits":4},{"id":231,"stream":"CSE","grade":"C","credits":4},{"id":201,"stream":"ESC","grade":"B","credits":4},{"id":201,"stream":"MTH","grade":"C","credits":4}],"year":2011,"type":"monsoon"}]},"name":"Aarti Chand","year":2009},"date":"2012.03.27"}}
 
 var grades = {"AA": 10, "A": 10, "A-": 9, "B": 8, "B-": 7, "C": 6, "C-": 5, "D": 4, "F": 0, "S": 10};
 var coursenames = { "CSE101": "Introduction to Programming", 
@@ -195,16 +186,16 @@ datelem.innerHTML = innerData.transcript.date;
 
 switch (verified) {
 	case "Unchecked":
-		velem.innerHTML = "Transcript has not been checked yet";
-		velem.style.background = "yellow";
+		//velem.innerHTML = "Transcript has not been checked yet";
+		//velem.style.background = "yellow";
 		break;
 	case "true":
-		velem.innerHTML = "Transcript has been verified succesfully";
-		velem.style.background = "lime";
+		//velem.innerHTML = "Transcript has been verified succesfully";
+		//velem.style.background = "lime";
 		break;
 	case "false":
-		velem.innerHTML = "Transcript verification has failed";
-		velem.style.background = "red";
+		//velem.innerHTML = "Transcript verification has failed";
+		//velem.style.background = "red";
 		break;
 }
 	get = document.getElementyById;
@@ -219,9 +210,6 @@ switch (verified) {
 	var cgpa = 0.0;
 	var ccour = 0.0;
 
-	var lx = 0;
-	var sr = "" ;
-
 	for (i in sem) {
 		var s = sem[i];
 		var courses = s.course instanceof Array ? s.course : [].concat(s.course);
@@ -230,10 +218,10 @@ switch (verified) {
 		var scour = 0.0;
 		for (i = 0; i < courses.length; ++i) {
 			dmat[i] = new Array();
-			dmat[i][0] = courses[i].stream + courses[i].id; // code
-			dmat[i][1] = coursenames[dmat[i][0]]; // title
-			dmat[i][2] = courses[i].credits; // credit
-			dmat[i][3] = courses[i].grade; // grade
+			dmat[i][1] = courses[i].stream + courses[i].id; // code
+			dmat[i][2] = coursenames[dmat[i][1]]; // title
+			dmat[i][3] = courses[i].credits; // credit
+			dmat[i][4] = courses[i].grade; // grade
 			sgpa += grades[courses[i].grade] * courses[i].credits;
 			scour += courses[i].credits;
 		}
@@ -241,21 +229,12 @@ switch (verified) {
 		cgpa += sgpa;
 		ccour += scour;
 
-		/*dmat[0][0] = s.type + " " + s.year;
+		dmat[0][0] = s.type + " " + s.year;
 		var last = dmat.length - 1;
 		dmat[last][5] = (sgpa / scour).toFixed(2);
-		dmat[last][6] = (cgpa / ccour).toFixed(2);*/
+		dmat[last][6] = (cgpa / ccour).toFixed(2);
 
-		if (s.type == "summer")
-			sr += "<tr><td colspan=\"2\"><table style=\"margin: 0 auto;\">";
-		else if (lx % 2 == 0 || s.type == "summer") 
-			sr += "<tr><td><table style=\"margin: 0 auto;\">";
-		else
-			sr += "<td><table style=\"margin: 0 auto;\">";
-
-		sr += "<tr><th colspan=4>" + s.type + " " + s.year + " (SGPA: " + (sgpa / scour).toFixed(2) + ")</th></tr>";
-		sr += "<tr><th>Code</th><th>Title</th><th>Credits</th><th>Grade</th></tr>";
-
+		var sr = "";
 		for (i = 0; i < dmat.length; ++i) {
 			sr += "<tr>";
 			for (j = 0; j < 7; ++j) {
@@ -268,34 +247,24 @@ switch (verified) {
 			sr += "</tr>";
 		}
 
-		if (lx % 2 == 1 || s.type == "summer")
-			sr += "</table></td></tr><tr><td>&nbsp;</td></tr>";
-		else
-			sr += "</table></td>";
-
-		// semTbl.innerHTML += sr; // + "<tr><td>&nbsp;</td></tr>";
-		if (s.type != "summer")
-			++lx;
+		semTbl.innerHTML += sr + "<tr><td>&nbsp;</td></tr>";
 	}
-
-	semTbl.innerHTML += sr;
-
-	if (lx % 2 == 0)
-		semTbl.innerHTML += "</tr>";
 }
 </script>
 <body onload="createTable()" >
-<pre id="verified" style="display: none"></pre>
+<!--<pre id="verified"></pre>-->
+<div>
+<img src=iiiitd.JPG style="float:left" />
+<img src=qr.png style="float:right" />
 <h1 style="text-align: center">Transcript</h1>
 <div style="float: right">
-<table><tr><td style="text-align: left">Program:</td><td>&nbsp;</td><td style="text-align: right" id="trProg"></td></tr>
-<tr><td style="text-align: left">Status:</td><td>&nbsp;</td><td style="text-align: right" id="trStatus"></td></tr></table></div>
+<table><tr><td>Program:</td><td id="trProg"></td></tr>
+<tr><td>Status:</td><td id="trStatus"></td></tr></table></div>
 <div>
-<table><tr><td style="text-align: left">Name:</td><td>&nbsp;</td><td style="text-align: right" id="trName"></td></tr>
-<tr><td style="text-align: left">Roll Num.:</td><td>&nbsp;</td><td style="text-align: right" id="trRoll"></td></tr></table></div>
+<table><tr><td>Name:</td><td id="trName"></td></tr>
+<tr><td>Roll Num.:</td><td id="trRoll"></td></tr></table></div>
 <table style="width: 100%">
 <tbody id="trSem">
-<!--
 <tr>
 <th>Semester</th>
 <th>Code</th>
@@ -305,11 +274,9 @@ switch (verified) {
 <th>SGPA</th>
 <th>CGPA</th>
 </tr>
--->
 </tbody>
 </table>
 <hr />
-<!-- <div style="text-align: right"><img src="QRX.png" style="width: 1in; height: 1in;" /></div> -->
 <div id="trDate" />
 </body>
 </html>
