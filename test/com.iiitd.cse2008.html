@@ -1,0 +1,316 @@
+<html>
+<head>
+<style>
+body, th, td, tr {
+	font-size: 12px;
+	/* font-weight: bold; */
+	font-family: sans-serif;
+	/* font-weight: bold;*/
+}
+td
+{
+text-align:center;
+}
+
+/*table
+{
+    border: 1px solid;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+td
+{
+    border: 1px dashed;
+	border-color: #aaa;
+}*/
+</style>
+<script>
+// var verified = "$$VERIFIED$$";
+var innerData = {"transcript":{"student":{"id":"002","status":"graduated","program":{"field":"CSE","degree":"BTech","year":2009,"semester":[{"course":[{"id":101,"stream":"CSE","grade":"B","credits":4},{"id":111,"stream":"CSE","grade":"C","credits":4},{"id":121,"stream":"CSE","grade":"B","credits":4},{"id":131,"stream":"CSE","grade":"C","credits":4}],"year":2010,"type":"monsoon"},{"course":[{"id":102,"stream":"CSE","grade":"B","credits":4},{"id":112,"stream":"CSE","grade":"C","credits":4},{"id":122,"stream":"CSE","grade":"C","credits":4},{"id":101,"stream":"MTH","grade":"C","credits":4}],"year":2011,"type":"winter"},{"course":{"id":482,"stream":"MSC","grade":"S","credits":2},"year":2011,"type":"summer"},{"course":[{"id":201,"stream":"COM","grade":"A","credits":4},{"id":201,"stream":"CSE","grade":"B","credits":4},{"id":231,"stream":"CSE","grade":"C","credits":4},{"id":201,"stream":"ESC","grade":"B","credits":4},{"id":201,"stream":"MTH","grade":"C","credits":4}],"year":2011,"type":"monsoon"},{"course":[{"id":201,"stream":"COM","grade":"A","credits":4},{"id":201,"stream":"CSE","grade":"B","credits":4},{"id":231,"stream":"CSE","grade":"C","credits":4},{"id":201,"stream":"ESC","grade":"B","credits":4},{"id":201,"stream":"MTH","grade":"C","credits":4}],"year":2011,"type":"monsoon"},{"course":[{"id":201,"stream":"COM","grade":"A","credits":4},{"id":201,"stream":"CSE","grade":"B","credits":4},{"id":231,"stream":"CSE","grade":"C","credits":4},{"id":201,"stream":"ESC","grade":"B","credits":4},{"id":201,"stream":"MTH","grade":"C","credits":4}],"year":2011,"type":"monsoon"},{"course":[{"id":201,"stream":"COM","grade":"A","credits":4},{"id":201,"stream":"CSE","grade":"B","credits":4},{"id":231,"stream":"CSE","grade":"C","credits":4},{"id":201,"stream":"ESC","grade":"B","credits":4},{"id":201,"stream":"MTH","grade":"C","credits":4}],"year":2011,"type":"monsoon"},{"course":[{"id":201,"stream":"COM","grade":"A","credits":4},{"id":201,"stream":"CSE","grade":"B","credits":4},{"id":231,"stream":"CSE","grade":"C","credits":4},{"id":201,"stream":"ESC","grade":"B","credits":4},{"id":201,"stream":"MTH","grade":"C","credits":4}],"year":2011,"type":"monsoon"},{"course":[{"id":201,"stream":"COM","grade":"A","credits":4},{"id":201,"stream":"CSE","grade":"B","credits":4},{"id":231,"stream":"CSE","grade":"C","credits":4},{"id":201,"stream":"ESC","grade":"B","credits":4},{"id":201,"stream":"MTH","grade":"C","credits":4}],"year":2011,"type":"monsoon"}]},"name":"Aarti Chand","year":2009},"date":"2012.03.27"}};
+
+var grades = {"AA": 10, "A": 10, "A-": 9, "B": 8, "B-": 7, "C": 6, "C-": 5, "D": 4, "F": 0, "S": 10};
+var coursenames = { "CSE101": "Introduction to Programming", 
+"CSE102": "Data Structures and Algorithms", 
+"CSE111": "Digital Circuits", 
+"CSE112": "Computer Organisation", 
+"CSE121": "Discrete Mathematics", 
+"CSE122": "Theory of Computation", 
+"CSE131": "System Management", 
+"CSE201": "Advanced Programming", 
+"CSE202": "Fundamentals of Database Systems", 
+"CSE222": "Analysis and Design of Algorithms", 
+"CSE231": "Operating Systems", 
+"CSE232": "Computer Networks", 
+"CSE300": "Software Engineering", 
+"CSE310": "Digital Hardware Design", 
+"CSE320": "Advanced Algorithms", 
+"CSE330": "Distributed Systems Security", 
+"CSE340": "Image Analysis", 
+"CSE341": "Biometrics", 
+"CSE342": "Pattern Recognition", 
+"CSE343": "Machine Learning", 
+"CSE344": "Computer Vision", 
+"CSE345": "Foundations of Computer Security", 
+"CSE441": "Advanced Biometrics", 
+"CSE500": "Secure Coding", 
+"CSE505": "Information Integration and Data Analytics", 
+"CSE506": "Data Mining", 
+"CSE507": "Database System Implementation", 
+"CSE508": "Information Retrieval", 
+"CSE509": "Advanced Data Management", 
+"CSE511": "Computer Architecture", 
+"CSE520": "Advanced Algorithms (Graduate)", 
+"CSE521": "Logic for Computer Science", 
+"CSE522": "Verification of Reactive Systems", 
+"CSE523": "Randomised Algorithms", 
+"CSE524": "Theory of Modern Cryptography", 
+"CSE530": "Distributed Systems Security (Graduate)", 
+"CSE535": "Mobile Computing", 
+"CSE537": "Embedded Systems", 
+"CSE538": "Ad Hoc Wireless Networks", 
+"CSE539": "Cellular Data Networks", 
+"CSE540": "Image Analysis (Graduate)", 
+"CSE541": "Advanced Biometrics (Graduate)", 
+"CSE542": "Pattern Recognition (Graduate)", 
+"CSE543": "Machine Learning (Graduate)", 
+"CSE544": "Computer Vision", 
+"CSE544": "Computer Vision", 
+"CSE545": "Foundations of Computer Security (Graduate)", 
+"CSE546": "Applied Cryptography", 
+"CSE547": "Building Secure Applications", 
+"CSE548": "Human Aspects of Information Security", 
+"CSE549": "Privacy Enhancing Technologies", 
+"CSE605": "Introduction to Geospatial Data Management", 
+"CSE606": "Data Warehousing", 
+"CSE607": "Financial Data Analytics", 
+"CSE645": "Digital and Cyber Forensics", 
+"CSE646": "Real World Security", 
+"CSE647": "Mobile and Cellular Network Security", 
+"CSE705": "Database Methods in Information Retrieval", 
+"ECE101": "Basic Electronic Circuits", 
+"MTH101": "Linear Algebra and Advanced Calculus", 
+"MTH201": "Probability and Statistics", 
+"MTH500": "Topics in Mathematics (Graduate)", 
+"MTH501": "Probability and Statistics (Graduate)", 
+"HSS101": "Technology and Society", 
+"HSS201": "Research Methods", 
+"HSS202": "Perspectives on Knowledge", 
+"HSS204": "Introduction to Psychology", 
+"HSS205": "Introduction to Sociology", 
+"HSS206": "Introduction to Film Studies", 
+"HSS207": "Human Values and Professional Ethics", 
+"HSS401": "Research Methods", 
+"HSS501": "Research Methods", 
+"ESC201": "Transducer And Signal Conditioning", 
+"ESC202": "Digital Communication", 
+"ESC203": "Signals and Systems", 
+"ESC204": "Quantitative and Qualitative Research Methods", 
+"ESC504": "Quantitative and Qualitative Research Methods (Graduate)", 
+"COM101": "Communication Skills", 
+"COM201": "Critical Reading", 
+"COM301": "Technical Communication", 
+"BIN301": "Introduction to Bioinformatics", 
+"BTY301": "Introduction to Biotechnology", 
+"BTY302": "Bioengineering and IT", 
+"DES301": "Exploring Visual Design", 
+"ECO301": "Introduction to Economic Analysis", 
+"ENT401": "Entrepreneurship as a Career", 
+"ENT402": "Entrepreneurship: Managing a Venture", 
+"ENV301": "The Earth System: An Environmental Science Perspective", 
+"FIN401": "Foundations of Finance", 
+"FIN402": "Valuation and Portfolio Management", 
+"PHS501": "Integrated Health Information Architectures", 
+"PHY301": "Quantum Mechanics and Lasers", 
+"PHY302": "Semiconductors and Optics", 
+"CSE391": "Special Topic", 
+"CSE392": "Special Topic", 
+"CSE393": "Special Topic", 
+"CSE394": "Special Topic", 
+"CSE395": "Special Topic", 
+"CSE398": "Independent Study", 
+"CSE398A": "Independent Study", 
+"CSE399": "Independent Project", 
+"CSE399A": "Independent Project", 
+"CSE491": "Special Topic", 
+"CSE492": "Special Topic", 
+"CSE493": "Special Topic", 
+"CSE494": "Special Topic", 
+"CSE495": "Special Topic", 
+"CSE498": "Undergraduate Research", 
+"CSE498A": "Undergraduate Research", 
+"CSE499": "BTech Project", 
+"CSE499A": "BTech Project", 
+"CSE591": "Special Topic", 
+"CSE592": "Special Topic", 
+"CSE593": "Special Topic", 
+"CSE594": "Special Topic", 
+"CSE595": "Special Topic", 
+"CSE599": "MTech Scholarly Paper", 
+"CSE599A": "MTech Scholarly Paper", 
+"CSE690": "Independent Study (MTech)", 
+"CSE691": "Special Topic", 
+"CSE692": "Special Topic", 
+"CSE693": "Special Topic", 
+"CSE694": "Special Topic", 
+"CSE695": "Special Topic", 
+"CSE699": "MTech Thesis", 
+"CSE699A": "MTech Thesis", 
+"CSE699B": "MTech Thesis", 
+"CSE699C": "MTech Thesis", 
+"CSE790": "Independent Study (PhD)", 
+"CSE791": "Special Topic", 
+"CSE792": "Special Topic", 
+"CSE793": "Special Topic", 
+"CSE794": "Special Topic", 
+"CSE795": "Special Topic", 
+"CSE796": "Special Topic", 
+"CSE797": "Special Topic", 
+"CSE799": "PhD Thesis", 
+"MSC481": "Self Growth", 
+"MSC482": "Self Growth", 
+"MSC491": "Community Work", 
+"MSC492": "Community Work" };
+
+function iterate(obj) {
+    var foo='<table style="border: 1px solid;">';
+    for (var property in obj) {
+        if (obj.hasOwnProperty(property)) {
+            foo+="<tr><td>"+property+"</td><td>";
+            if (typeof obj[property] == "object")
+                foo += iterate(obj[property]);
+            else
+                foo += obj[property];
+            foo += "</td></tr>";
+        }
+    }
+    foo += "</table>";
+    return foo;
+}
+
+function createTable() {
+var velem = document.getElementById("verified");
+var datelem = document.getElementById("trDate");
+datelem.innerHTML = innerData.transcript.date;
+
+switch (verified) {
+	case "Unchecked":
+		velem.innerHTML = "Transcript has not been checked yet";
+		velem.style.background = "yellow";
+		break;
+	case "true":
+		velem.innerHTML = "Transcript has been verified succesfully";
+		velem.style.background = "lime";
+		break;
+	case "false":
+		velem.innerHTML = "Transcript verification has failed";
+		velem.style.background = "red";
+		break;
+}
+	get = document.getElementyById;
+	stu = innerData.transcript.student;
+	document.getElementById("trName").innerHTML = stu.name;
+	document.getElementById("trRoll").innerHTML = stu.year + stu.id;
+	document.getElementById("trProg").innerHTML = stu.program.degree + " (" + stu.program.field + ")";
+	document.getElementById("trStatus").innerHTML = stu.status;
+
+	var semTbl = document.getElementById("trSem");
+	var sem = stu.program.semester;
+	var cgpa = 0.0;
+	var ccour = 0.0;
+
+	var lx = 0;
+	var sr = "" ;
+
+	for (i in sem) {
+		var s = sem[i];
+		var courses = s.course instanceof Array ? s.course : [].concat(s.course);
+		var dmat = new Array();
+		var sgpa = 0.0;
+		var scour = 0.0;
+		for (i = 0; i < courses.length; ++i) {
+			dmat[i] = new Array();
+			dmat[i][0] = courses[i].stream + courses[i].id; // code
+			dmat[i][1] = coursenames[dmat[i][0]]; // title
+			dmat[i][2] = courses[i].credits; // credit
+			dmat[i][3] = courses[i].grade; // grade
+			sgpa += grades[courses[i].grade] * courses[i].credits;
+			scour += courses[i].credits;
+		}
+
+		cgpa += sgpa;
+		ccour += scour;
+
+		/*dmat[0][0] = s.type + " " + s.year;
+		var last = dmat.length - 1;
+		dmat[last][5] = (sgpa / scour).toFixed(2);
+		dmat[last][6] = (cgpa / ccour).toFixed(2);*/
+
+		if (s.type == "summer")
+			sr += "<tr><td colspan=\"2\"><table style=\"margin: 0 auto;\">";
+		else if (lx % 2 == 0 || s.type == "summer") 
+			sr += "<tr><td><table style=\"margin: 0 auto;\">";
+		else
+			sr += "<td><table style=\"margin: 0 auto;\">";
+
+		sr += "<tr><th colspan=4>" + s.type + " " + s.year + " (SGPA: " + (sgpa / scour).toFixed(2) + ")</th></tr>";
+		sr += "<tr><th>Code</th><th>Title</th><th>Credits</th><th>Grade</th></tr>";
+
+		for (i = 0; i < dmat.length; ++i) {
+			sr += "<tr>";
+			for (j = 0; j < 7; ++j) {
+				if (dmat[i][j] != undefined) {
+					sr += "<td>" + dmat[i][j] + "</td>";
+				} else {
+					sr += "<td />";
+				}
+			}
+			sr += "</tr>";
+		}
+
+		if (lx % 2 == 1 || s.type == "summer")
+			sr += "</table></td></tr><tr><td>&nbsp;</td></tr>";
+		else
+			sr += "</table></td>";
+
+		// semTbl.innerHTML += sr; // + "<tr><td>&nbsp;</td></tr>";
+		if (s.type != "summer")
+			++lx;
+	}
+
+	semTbl.innerHTML += sr;
+
+	if (lx % 2 == 0)
+		semTbl.innerHTML += "</tr>";
+}
+</script>
+<body onload="createTable()" >
+<pre id="verified" style="display: none"></pre>
+<h1 style="text-align: center">Transcript</h1>
+<div style="float: right">
+<table><tr><td style="text-align: left">Program:</td><td>&nbsp;</td><td style="text-align: right" id="trProg"></td></tr>
+<tr><td style="text-align: left">Status:</td><td>&nbsp;</td><td style="text-align: right" id="trStatus"></td></tr></table></div>
+<div>
+<table><tr><td style="text-align: left">Name:</td><td>&nbsp;</td><td style="text-align: right" id="trName"></td></tr>
+<tr><td style="text-align: left">Roll Num.:</td><td>&nbsp;</td><td style="text-align: right" id="trRoll"></td></tr></table></div>
+<table style="width: 100%">
+<tbody id="trSem">
+<!--
+<tr>
+<th>Semester</th>
+<th>Code</th>
+<th>Title</th>
+<th>Credit</th>
+<th>Grade</th>
+<th>SGPA</th>
+<th>CGPA</th>
+</tr>
+-->
+</tbody>
+</table>
+<hr />
+<!-- <div style="text-align: right"><img src="QRX.png" style="width: 1in; height: 1in;" /></div> -->
+<div id="trDate" />
+</body>
+</html>
+

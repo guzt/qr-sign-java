@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE transcript SYSTEM "transcript.dtd">
+<transcript date="2012.03.27">
+	<student year="2009" id="002" name="Aarti Chand" status="graduated">
+		<program degree="BTech" field="CSE" year="2009">
+			<semester year="2010" type="monsoon">
+				<course stream="CSE" id="101" credits="4" grade="B" />
+				<course stream="CSE" id="111" credits="4" grade="C" />
+				<course stream="CSE" id="121" credits="4" grade="B" />
+				<course stream="CSE" id="131" credits="4" grade="C" />
+			</semester>
+			<semester year="2011" type="winter">
+				<course stream="CSE" id="102" credits="4" grade="B" />
+				<course stream="CSE" id="112" credits="4" grade="C" />
+				<course stream="CSE" id="122" credits="4" grade="C" />
+				<course stream="MTH" id="101" credits="4" grade="C" />
+			</semester>
+			<semester year="2011" type="summer">
+				<course stream="MSC" id="482" credits="2" grade="S" />
+			</semester>
+			<semester year="2011" type="monsoon">
+				<course stream="COM" id="201" credits="4" grade="A" />
+				<course stream="CSE" id="201" credits="4" grade="B" />
+				<course stream="CSE" id="231" credits="4" grade="C" />
+				<course stream="ESC" id="201" credits="4" grade="B" />
+				<course stream="MTH" id="201" credits="4" grade="C" />
+			</semester>
+			<semester year="2011" type="monsoon">
+				<course stream="COM" id="201" credits="4" grade="A" />
+				<course stream="CSE" id="201" credits="4" grade="B" />
+				<course stream="CSE" id="231" credits="4" grade="C" />
+				<course stream="ESC" id="201" credits="4" grade="B" />
+				<course stream="MTH" id="201" credits="4" grade="C" />
+			</semester>
+			<semester year="2011" type="monsoon">
+				<course stream="COM" id="201" credits="4" grade="A" />
+				<course stream="CSE" id="201" credits="4" grade="B" />
+				<course stream="CSE" id="231" credits="4" grade="C" />
+				<course stream="ESC" id="201" credits="4" grade="B" />
+				<course stream="MTH" id="201" credits="4" grade="C" />
+			</semester>
+			<semester year="2011" type="monsoon">
+				<course stream="COM" id="201" credits="4" grade="A" />
+				<course stream="CSE" id="201" credits="4" grade="B" />
+				<course stream="CSE" id="231" credits="4" grade="C" />
+				<course stream="ESC" id="201" credits="4" grade="B" />
+				<course stream="MTH" id="201" credits="4" grade="C" />
+			</semester>
+			<semester year="2011" type="monsoon">
+				<course stream="COM" id="201" credits="4" grade="A" />
+				<course stream="CSE" id="201" credits="4" grade="B" />
+				<course stream="CSE" id="231" credits="4" grade="C" />
+				<course stream="ESC" id="201" credits="4" grade="B" />
+				<course stream="MTH" id="201" credits="4" grade="C" />
+			</semester>
+			<semester year="2011" type="monsoon">
+				<course stream="COM" id="201" credits="4" grade="A" />
+				<course stream="CSE" id="201" credits="4" grade="B" />
+				<course stream="CSE" id="231" credits="4" grade="C" />
+				<course stream="ESC" id="201" credits="4" grade="B" />
+				<course stream="MTH" id="201" credits="4" grade="C" />
+			</semester>
+		</program>
+	</student>
+</transcript>
